@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Gbf-services</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body, html {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f9fa;
+        }
+        .register-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <h2 class="text-center">Register</h2>
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="regUsername">Username</label>
+                <input type="text" class="form-control" id="regUsername" required>
+            </div>
+            <div class="form-group">
+                <label for="regPassword">Password</label>
+                <input type="password" class="form-control" id="regPassword" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+        <div id="regErrorMsg" class="text-danger mt-3" style="display: none;">Username already exists, please try another.</div>
+    </div>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const regUsername = document.getElementById('regUsername').value;
+            const regPassword = document.getElementById('regPassword').value;
+
+            const users = JSON.parse(localStorage.getItem('users')) || [];
+
+            const userExists = users.some(user => user.username === regUsername);
+
+            if (userExists) {
+                document.getElementById('regErrorMsg').style.display = 'block';
+            } else {
+                users.push({ username: regUsername, password: regPassword });
+                localStorage.setItem('users', JSON.stringify(users));
+                alert('Registration successful! Please log in.');
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</body>
+</html>

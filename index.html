@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gbf-services</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/gbf-removebg-preview.png">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+        <header class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Gbf-services</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+    </header>
+
+    <main class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Gbf-services</h1>
+            
+            <hr class="my-4">
+            <p>Discover our services .</p>
+            <a class="btn btn-primary btn-lg" href="services.html" role="button">Services</a>
+        </div>
+    </main>
+    <div class="whatsapp-icon">
+        <a  href="https://wa.me/+96103226752"><img src="img/whatsapp.svg"  width="150px" style="border-radius: 50%;" alt="WhatsApp"></a>
+    </div>
+    <footer class="bg-light text-center py-4">
+        <p>&copy; 2024 Gbf-services. All rights reserved.</p>
+    </footer>
+    <script>
+        if (!localStorage.getItem('authenticated')) {
+            window.location.href = 'login.html'; // Redirect to login if not authenticated
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+    padding: 20px;
+}
+
+.jumbotron {
+    background-color: #e9ecef;
+}
+
+h1, h3 {
+    color: #343a40;
+}
+
+p {
+    color: black;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;;
+    }
+}
+label{
+    font-weight: bolder;
+    color: blue;
+}
+#btn{
+    color: white;
+    background-color: blue;
+    border: none;
+    padding: 7px 50px;
+    border-radius: 1rem;
+    margin-left: 24px;
+}
+.containermt-5{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999; /* Ensure the icon stays on top of other elements */
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 600px) {
+.whatsapp-icon img{
+        width:60px;
+        margin-left: 10px;
+    }
+}
